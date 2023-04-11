@@ -31,8 +31,8 @@ class Test_W_Count(unittest.TestCase):
         output = False
         self.assertEqual(check_palindrome(input_sample), output)
 
-    def test_empty_string(self):
-        input_sample = ''
+    def test_space_string(self):
+        input_sample = 'hola a l o h'
         output = True
         self.assertEqual(check_palindrome(input_sample), output)
 
