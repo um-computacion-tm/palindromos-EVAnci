@@ -1,11 +1,11 @@
 def check_palindrome(s):
     # Ignore spaces in the string 
     s = s.lower()
-    s_no_spaces = ''
+    s_no_punctuation = ''
     for i in s:
-        if i != ' ':
-            s_no_spaces += i
-    s = s_no_spaces
+        if i not in ' !"#$%&\'()*+,-./:;<=>?@[\]^_`{|}~)':
+            s_no_punctuation += i
+    s = s_no_punctuation
     # if the string len is 1 or 0 will be a palindrome
     if len(s) == 1 or len(s) == 0:
         return True
