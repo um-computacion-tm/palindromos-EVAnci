@@ -9,7 +9,7 @@ from palindrome import check_palindrome
 #   Testing     #
 #################
 
-class Test_W_Count(unittest.TestCase):
+class Test_Palindrome(unittest.TestCase):
     
     def test_empty_string(self):
         input_sample = ''
@@ -33,6 +33,11 @@ class Test_W_Count(unittest.TestCase):
 
     def test_space_string(self):
         input_sample = 'hola a l o h'
+        output = True
+        self.assertEqual(check_palindrome(input_sample), output)
+
+    def test_hard_string(self):
+        input_sample = 'A man, a plan, a canal - Panama'
         output = True
         self.assertEqual(check_palindrome(input_sample), output)
 
